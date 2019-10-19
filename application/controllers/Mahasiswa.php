@@ -16,6 +16,15 @@
 				$this->load->view('mahasiswa/index', $data);
 				$this->load->view('templates/footer');
 			}
+
+			public function tambah()
+			{
+				$data['judul'] = 'Form Tambah Data Mahasiswa';
+				$this->load->view('templates/header');
+				$this->load->view('mahasiswa/tambah');
+				$this->load->view('templates/footer');
+			}
+
 		}
 
  ?>
