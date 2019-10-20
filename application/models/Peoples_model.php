@@ -15,4 +15,9 @@
 		{
 			return $this->db->get('peoples', $limit, $start)->result_array();
 		}
+
+		public function countAllPeoples()
+		{
+			$this->db->get('peoples')->num_rows();
+		}
 	}
