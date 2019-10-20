@@ -8,7 +8,14 @@
 
 				$this->load->model('Peoples_model', 'peoples');
 
-				$data['peoples'] = $this->peoples->getAllPeoples();
+				// PAGINATION
+				$this->load->library('pagination');
+
+				// config
+				$config['base_url'] = 'http://localhost/ci-app/peoples/index';
+				$config['total_rows'] = $this->peoples->countAllPeoples();
+
+				$data['peoples'] = $this->peoples->getPeoples(12, 30);
 
 				$this->load->view('templates/header', $data);
 				$this->load->view('peoples/index', $data);
