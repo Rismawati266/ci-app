@@ -23,7 +23,9 @@
 				$data['judul'] = 'Form Tambah Data Mahasiswa';
 
 				$this->form_validation->set_rules('nama', 'Nama', 'required');
-				
+				$this->form_validation->set_rules('nrp', 'NRP', 'required');
+				$this->form_validation->set_rules('email', 'Email', 'required');
+
 				if( $this->form_validation->run() == FALSE ) {
 					$this->load->view('templates/header', $data);
 					$this->load->view('mahasiswa/tambah');
