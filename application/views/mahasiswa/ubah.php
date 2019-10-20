@@ -5,7 +5,7 @@
 			
 			<div class="card">
   				<div class="card-header">
-    				Form Tambah Data Mahasiswa
+    				Form Ubah Data Mahasiswa
   				</div>
   				<div class="card-body">
     			<form action="" method="post">
@@ -39,7 +39,7 @@
 	      					<option value="Teknik Lingkungan">Teknik Lingkungan</option>
     					</select>
   					</div>
-  					<button type="submit" name="tambah" class="btn btn-primary float-right">Tambah Data</button>
+  					<button type="submit" name="ubah" class="btn btn-primary float-right">Ubah Data</button>
 				  </form>
   				</div>
 			</div>
