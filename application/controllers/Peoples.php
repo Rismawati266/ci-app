@@ -4,13 +4,10 @@
 		{
 			public function index()
 			{
-				$data['judul'] = 'Daftar Mahasiswa';
-				$data['mahasiswa'] = $this->Mahasiswa_model->getAllMahasiswa();
-				if( $this->input->post('keyword') ) {
-					$data['mahasiswa'] = $this->Mahasiswa_model->cariDataMahasiswa();
-				}
+				$data['judul'] = 'List of Peoples';
+
 				$this->load->view('templates/header', $data);
-				$this->load->view('mahasiswa/index', $data);
+				$this->load->view('peoples/index', $data);
 				$this->load->view('templates/footer');
 			}
 		}
