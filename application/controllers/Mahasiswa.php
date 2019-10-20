@@ -53,5 +53,23 @@
 				$this->load->view('templates/footer');
 			}
 
+			public function ubah()
+			{
+				$data['judul'] = 'Form Ubah Data Mahasiswa';
+
+				$this->form_validation->set_rules('nama', 'Nama', 'required');
+				$this->form_validation->set_rules('nrp', 'NRP', 'required|numeric');
+				$this->form_validation->set_rules('email', 'Email', 'required|valid_email');
+
+				if( $this->form_validation->run() == FALSE ) {
+					$this->load->view('templates/header', $data);
+					$this->load->view('mahasiswa/ubah');
+					$this->load->view('templates/footer');
+				} else {
+					$this->Mahasiswa_model->ubahDataMahasiswa();
+					$this->session->set_flashdata('flash', 'Diubah');
+					redirect('mahasiswa');
+				}
+
 		}
  ?>
