@@ -70,6 +70,6 @@
 					$this->session->set_flashdata('flash', 'Diubah');
 					redirect('mahasiswa');
 				}
+			}
 
 		}
- ?>
