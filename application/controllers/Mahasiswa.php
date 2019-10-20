@@ -31,12 +31,11 @@
 					$this->load->view('mahasiswa/tambah');
 					$this->load->view('templates/footer');
 				} else {
-					$this->Model_mahasiswa->tambahDataMahaiswa();
+					$this->Mahasiswa_model->tambahDataMahasiswa();
 					redirect('mahasiswa');
 				}
 
 			}
 
 		}
-
  ?>
