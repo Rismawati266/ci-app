@@ -47,4 +47,11 @@
 			$this->db->update('mahasiswa', $data);
 		}
 
+		public function cariDataMahasiswa()
+		{
+			$keyword = $this->input->post('keyword', true);
+			$this->db->like('nama', $keyword);
+			return $this->db->get('mahasiswa')->result_array();
+		}
+
 	}
