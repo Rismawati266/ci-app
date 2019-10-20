@@ -18,6 +18,7 @@
 
 		public function countAllPeoples()
 		{
-			$this->db->get('peoples')->num_rows();
+			return $this->db->get('peoples')->num_rows();
 		}
+
 	}
