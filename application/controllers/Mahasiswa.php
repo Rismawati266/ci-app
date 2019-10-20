@@ -32,6 +32,7 @@
 					$this->load->view('templates/footer');
 				} else {
 					$this->Mahasiswa_model->tambahDataMahasiswa();
+					$this->session->set_flashdata('flash', 'Ditambahkan');
 					redirect('mahasiswa');
 				}
 
