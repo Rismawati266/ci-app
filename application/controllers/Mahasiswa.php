@@ -53,9 +53,10 @@
 				$this->load->view('templates/footer');
 			}
 
-			public function ubah()
+			public function ubah($id)
 			{
 				$data['judul'] = 'Form Ubah Data Mahasiswa';
+				$data['mahasiswa'] = $this->Mahasiswa_model->getMahasiswaById($id);
 
 				$this->form_validation->set_rules('nama', 'Nama', 'required');
 				$this->form_validation->set_rules('nrp', 'NRP', 'required|numeric');
@@ -63,7 +64,7 @@
 
 				if( $this->form_validation->run() == FALSE ) {
 					$this->load->view('templates/header', $data);
-					$this->load->view('mahasiswa/ubah');
+					$this->load->view('mahasiswa/ubah, $data');
 					$this->load->view('templates/footer');
 				} else {
 					$this->Mahasiswa_model->ubahDataMahasiswa();
