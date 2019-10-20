@@ -9,7 +9,8 @@
   				</div>
   				<div class="card-body">
     			<form action="" method="post">
-					<div class="form-group">
+            <input type="hidden" name="id" value="<?= $mahasiswa['id']; ?>">
+					   <div class="form-group">
     					<label for="nama">Nama</label>
     					<input type="text" name="nama" class="form-control" id="nama" value="<?= $mahasiswa['nama']; ?>">
               <small class="form-text text-danger"><?= form_error('nama'); ?></small>
