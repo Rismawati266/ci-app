@@ -10,7 +10,7 @@
 
 			public function index()
 			{
-				
+				var_dump(base_url());
 				$data['judul'] = 'Daftar Mahasiswa';
 				$data['mahasiswa'] = $this->Mahasiswa_model->getAllMahasiswa();
 				$this->load->view('templates/header', $data);
