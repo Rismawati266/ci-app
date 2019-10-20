@@ -10,7 +10,6 @@
 
 			public function index()
 			{
-				var_dump(base_url());
 				$data['judul'] = 'Daftar Mahasiswa';
 				$data['mahasiswa'] = $this->Mahasiswa_model->getAllMahasiswa();
 				$this->load->view('templates/header', $data);
@@ -43,6 +42,15 @@
 				$this->Mahasiswa_model->hapusDataMahasiswa($id);
 				$this->session->set_flashdata('flash', 'Dihapus');
 				redirect('mahasiswa');
+			}
+
+			public function detail($id)
+			{
+				$data['judul'] = 'Detail Data Mahasiswa';
+				$data['mahasiswa'] = $this->Mahasiswa_model->getMahasiswaById($id);
+				$this->load->view('templates/header', $data);
+				$this->load->view('mahasiswa/detail', $data);
+				$this->load->view('templates/footer');
 			}
 
 		}
