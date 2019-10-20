@@ -1,6 +1,6 @@
 <?php 	
 
-		class Mahasiswa extends CI_Controller {
+		class Peoples extends CI_Controller {
 			public function __construct()
 			{
 				parent::__construct();
