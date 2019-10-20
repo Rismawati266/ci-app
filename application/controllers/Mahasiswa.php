@@ -21,9 +21,17 @@
 			public function tambah()
 			{
 				$data['judul'] = 'Form Tambah Data Mahasiswa';
-				$this->load->view('templates/header', $data);
-				$this->load->view('mahasiswa/tambah');
-				$this->load->view('templates/footer');
+
+				$this->form_validation->set_rules('nama', 'Nama', 'required');
+				
+				if( $this->form_validation->run() == FALSE ) {
+					$this->load->view('templates/header', $data);
+					$this->load->view('mahasiswa/tambah');
+					$this->load->view('templates/footer');
+				} else {
+					echo "Berhasil!";
+				}
+
 			}
 
 		}
