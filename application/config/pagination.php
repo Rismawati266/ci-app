@@ -1,8 +1,6 @@
 <?php 
 
 				$config['base_url'] = 'http://localhost:8080/ci-app/peoples/index';
-				$config['total_rows'] = $this->peoples->countAllPeoples();
-				$config['per_page'] = 8;
 				$config['num_links'] = 5;
 
 				// styling
