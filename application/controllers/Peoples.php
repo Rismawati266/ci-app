@@ -33,6 +33,10 @@
 				$config['next_tag_open'] = '<li class="page-item">';
 				$config['next_tag_close'] = '</li>';
 
+				$config['prev_link'] = '&laquo';
+				$config['prev_tag_open'] = '<li class="page-item">';
+				$config['prev_tag_close'] = '</li>';
+
 
 				// Initialzie
 				$this->pagination->initialize($config);
