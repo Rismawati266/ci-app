@@ -43,6 +43,8 @@
 				$config['cur_tag_open'] = '<li class="page-item">';
 				$config['cur_tag_close'] = '</li>';
 
+				$config['attributes'] = array('class' => 'page-link');
+
 
 
 				// Initialzie
