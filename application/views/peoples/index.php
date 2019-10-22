@@ -1,10 +1,21 @@
 <div class="container">
 	<h3 class="mt-3">List of Peoples</h3>
+
+	<div class="row">
+		<div class="col-md">
+			<form action="">
+				<div class="input-group mb-3">
+  					<input type="text" class="form-control" placeholder="Search Keyword . . .">
+ 					 <div class="input-group-append">
+   						 <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
+  					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+
 	<div class="row">
 		<div class="col-md-10">
-			
-				
-
 				<table class="table">
 					<thead>
 						<tr>
