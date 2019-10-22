@@ -1,8 +1,9 @@
 <div class="container">
+	<h3 class="mt-3">List of Peoples</h3>
 	<div class="row">
 		<div class="col-md-10">
 			
-				<h3 class="mt-3">List of Peoples</h3>
+				
 
 				<table class="table">
 					<thead>
