@@ -17,8 +17,14 @@
 				$config['total_rows'] = $this->peoples->countAllPeoples();
 				$config['per_page'] =12;
 
+				// styling
+				$config['full_tag_open'] = '<nav><ul class="pagination">';
+				$config['full_tag_close'] = '</ul></nav>';
+
 				// Initialzie
 				$this->pagination->initialize($config);
+
+
 
 				$data['start'] = $this->uri->segment(3);
 				$data['peoples'] = $this->peoples->getPeoples($config['per_page'], $data['start']);
