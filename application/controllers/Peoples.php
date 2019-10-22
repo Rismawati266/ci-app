@@ -20,7 +20,8 @@
 				// Initialzie
 				$this->pagination->initialize($config);
 
-				$data['peoples'] = $this->peoples->getPeoples(12, 30);
+				$data['start'] = $this->uri->segment(3);
+				$data['peoples'] = $this->peoples->getPeoples($config['per_page'], $data['start']);
 
 				$this->load->view('templates/header', $data);
 				$this->load->view('peoples/index', $data);
