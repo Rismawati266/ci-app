@@ -3,7 +3,7 @@
 
 	<div class="row">
 		<div class="col-md">
-			<form action="">
+			<form action="" method="post">
 				<div class="input-group mb-3">
   					<input type="text" class="form-control" placeholder="Search Keyword . . .">
  					 <div class="input-group-append" name="Keyword">
