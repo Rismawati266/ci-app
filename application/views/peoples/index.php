@@ -6,8 +6,8 @@
 			<form action="">
 				<div class="input-group mb-3">
   					<input type="text" class="form-control" placeholder="Search Keyword . . .">
- 					 <div class="input-group-append">
-   						 <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
+ 					 <div class="input-group-append" name="Keyword">
+   						 <input class="btn btn-primary" type="submit" name="submit">Button</input>
   					</div>
 				</div>
 			</form>
