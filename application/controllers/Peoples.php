@@ -21,6 +21,11 @@
 				$config['full_tag_open'] = '<nav><ul class="pagination">';
 				$config['full_tag_close'] = '</ul></nav>';
 
+				$config['first_link'] = 'First';
+				$config['first_tag_open'] = '<li class="page-item">';
+				$config['first_tag_close'] = '</li>';
+
+
 				// Initialzie
 				$this->pagination->initialize($config);
 
