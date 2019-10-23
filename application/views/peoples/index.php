@@ -5,10 +5,10 @@
 		<div class="col-md-5">
 			<form action="<?= base_url('peoples'); ?>" method="post">
 				<div class="input-group mb-3">
-  					<input type="text" class="form-control" placeholder="Search Keyword . . ." name="keyword" autocomplete="off" autofocus>
-  					<div class="input-group-append">
-  						<input class="btn btn-primary" type="submit" name="submit">
-  					</div>
+					<input type="text" class="form-control" placeholder="Search Keyword . . ." name="keyword">
+					<div class="input-group-append">
+						<input class="btn btn-primary" type="submit" name="submit">
+					</div>
 				</div>
 			</form>
 		</div>
