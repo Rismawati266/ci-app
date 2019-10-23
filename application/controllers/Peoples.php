@@ -14,7 +14,9 @@
 
 				// ambil kata keyword
 				if($this->input->post('submit')) {
-					echo $this->input->post('keyword');
+					$data['keyword'] = $this->input->post('keyword');			
+				} else {
+					$data['keyword'] = null;
 				}
 
 				// config
@@ -27,7 +29,8 @@
 
 
 				$data['start'] = $this->uri->segment(3);
-				$data['peoples'] = $this->peoples->getPeoples($config['per_page'], $data['start']);
+				$data['peoples'] = $this->peoples->getPeoples($config['per_page'], $data['start'], $data['keyword']);
+				
 
 				$this->load->view('templates/header', $data);
 				$this->load->view('peoples/index', $data);
