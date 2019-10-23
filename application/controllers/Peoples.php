@@ -12,6 +12,11 @@
 				// load library
 				$this->load->library('pagination');
 
+				// ambil kata keyword
+				if($this->input->post('submit')) {
+					echo $this->input->post('keyword');
+				}
+
 				// config
 				$config['total_rows'] = $this->peoples->countAllPeoples();
 				$config['per_page'] = 8;
@@ -19,7 +24,6 @@
 
 				// Initialzie
 				$this->pagination->initialize($config);
-
 
 
 				$data['start'] = $this->uri->segment(3);
