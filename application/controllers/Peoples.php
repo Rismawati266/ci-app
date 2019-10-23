@@ -12,15 +12,19 @@
 				// load library
 				$this->load->library('pagination');
 
+
 				// ambil kata keyword
 				if($this->input->post('submit')) {
-					$data['keyword'] = $this->input->post('keyword');			
+					$data['keyword'] = $this->input->post('keyword');
+					$this->session->set_userdata('keyword', $data['keyword']);		
 				} else {
-					$data['keyword'] = null;
+					$data['keyword'] = $this->session->userdata('keyword');
 				}
 
 				// config
-				$config['total_rows'] = $this->peoples->countAllPeoples();
+				$this->db->like('name', $data['keyword']);
+				$this->db->from('peoples');
+				$config['total_rows'] = $this->db->count_all_results();
 				$config['per_page'] = 8;
 
 
