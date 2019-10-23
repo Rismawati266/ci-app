@@ -27,6 +27,13 @@
 						</tr>
 					</thead>
 					<tbody>
+						<?php if (empty($peoples)) : ?>
+							<tr>
+								<td colspan="4">
+									<div class="alert alert-danger" role="alert">Data not Found!</div>
+								</td>
+							</tr>
+						<?php endif; ?>
 						<?php foreach( $peoples as $people ) : ?>
 						<tr>
 							<th><?= ++$start; ?></th>
