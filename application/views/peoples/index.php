@@ -16,6 +16,7 @@
 
 	<div class="row">
 		<div class="col-md-10">
+			<h5>Results : <?= $total_rows; ?></h5>
 				<table class="table">
 					<thead>
 						<tr>

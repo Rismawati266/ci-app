@@ -25,6 +25,7 @@
 				$this->db->like('name', $data['keyword']);
 				$this->db->from('peoples');
 				$config['total_rows'] = $this->db->count_all_results();
+				$data['total_rows'] = $config['total_rows'];
 				$config['per_page'] = 8;
 
 
